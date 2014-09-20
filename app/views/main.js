@@ -19,7 +19,7 @@ module.exports = View.extend({
   template: `
     <body>
       <header>
-        <h1>ATL Infrastructure Map</h1>
+        <h1>Karta komunalnih akcija</h1>
         <nav>
           <input type="text" role="searchbox" class="searchbox" placeholder="type to search">
           <select role="neighborhoods"></select>
@@ -29,15 +29,15 @@ module.exports = View.extend({
       </header>
 
       <div class="content">
-        <div class="context">The City of Atlanta is investing $150-$250 million dollars to build a better city. Explore the map to see potential projects and share your thoughts.</div>
+        <div class="context">Grad svake godine potroši XX kuna za izgradnju. Istražite kartu i pogledajte potencijalne akcije i podijelite svoje mišljenje.</div>
         <div class="links">
-          <a href="http://www.atlantaga.gov/infrastructure" target="_blank">Read more</a> • 
-          <a class="linklike" role="showDisclaimer">Disclaimer & Policy</a> • 
-          <a class="linklike" role="showAdditional">Additional Programs</a>
+          <a href="http://www.atlantaga.gov/infrastructure" target="_blank">Čitaj više</a> • 
+          <a class="linklike" role="showDisclaimer">Odricanje odgovornosti i pravila</a> • 
+          <a class="linklike" role="showAdditional">Dodatni programi</a>
         </div>
         <div class="summary">
           <div><span role="count"></span> proposed projects</div>
-          <div>Estimated cost: <span role="cost"></span></div>
+          <div>Očekivani trošak: <span role="cost"></span></div>
         </div>
         <div role="projects"></div>
       </div>
@@ -95,7 +95,7 @@ module.exports = View.extend({
     var options = items.map(function(item) {
       return '<option value="' + item + '">' + item + '</option>';
     });
-    options.unshift('<option value="all">All ' + desc + '</option>');
+    options.unshift('<option value="all">Sve ' + desc + '</option>');
     this.getByRole(role).innerHTML = options;
   },
 
