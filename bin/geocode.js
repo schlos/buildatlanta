@@ -48,7 +48,7 @@ reader.addListener('data', function(record) {
   }
 
   queue.push(function() {
-    geocoder.geocode(address + ', Atlanta, GA', function(err, data) {
+    geocoder.geocode(address + ', Zagreb, Hrvatska', function(err, data) {
       if (!data) {
         process.stdout.write('?');
         writer.writeRecord(_.values(record));
@@ -59,7 +59,7 @@ reader.addListener('data', function(record) {
       var latlng = data.results[0].geometry.location;
 
       // Points that are at the exact center of the city didn't geocode correctly
-      if (latlng.lat === 33.7489954 && latlng.lng === -84.3879824) {
+      if (latlng.lat === 45.8403491 && latlng.lng === 15.823904) {
         writer.writeRecord(_.values(record));
         return;
       }
