@@ -39,5 +39,5 @@
     "release": "npm run build && bin/release.sh",
     "start": "npm run watch & http-server",
     "geocode": "node bin/geocode.js"
-  }
+  },
 }
